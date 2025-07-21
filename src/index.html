@@ -28,4 +28,49 @@ tags: 'sitemap' # content/content.json will make sure that all pages in content/
 <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
 <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
 <!-- {% include "components/home-schema.html" %} -->
-{% endblock %} {% block body %} {% endblock %}
+{% endblock %} {% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1059">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h1 class="cs-title">
+        Stitch Mechanics Now Serving Designers & Developers
+      </h1>
+      <p class="cs-text">
+        We are the premier Stitch Design Pack for mechanics and auto body
+        websites of all varieties.
+      </p>
+      <a href="" class="cs-button-solid">Request Appointment</a>
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="
+        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic-m.jpg
+      "
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="
+        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic.jpg
+      "
+    />
+    <img
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic.jpg"
+      alt="mechanic"
+      width="2250"
+      height="1500"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+
+{% endblock %}
