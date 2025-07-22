@@ -897,6 +897,10 @@
       justify-content: space-between;
       align-items: center;
       gap: calc(24 / 16 * 1rem);
+
+      img {
+        border-radius: 5px;
+      }
     }
 
     .cs-toggle {
