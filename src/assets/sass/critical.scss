@@ -15,7 +15,7 @@
     /* Centers button */
     text-align: left;
     /* 200px - 300px - leaving extra space for the navigation */
-    padding: clamp(12.5rem, 31.95vw, 18.75rem) calc(16 / 16 * 1rem) 0;
+    padding: clamp(12rem, 31.95vw, 14rem) calc(16 / 16 * 1rem) 0;
 
     /* Laptop Image Styles */
     .laptop-image-container {
@@ -96,6 +96,8 @@
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
       align-items: center;
+      /* centers content vertically */
+      justify-content: center;
     }
 
     .cs-title {
