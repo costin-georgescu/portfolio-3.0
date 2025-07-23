@@ -8,6 +8,14 @@ tags: 'sitemap' # content/content.json will make sure that all pages in content/
 {% extends "layouts/base.html" %} {% block head %}
 <!-- Critical styles are loaded first -->
 <link rel="stylesheet" href="/assets/css/critical.css" />
+<!-- Font Awesome for icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 
 <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
 {% if kit.isProduction %}
@@ -68,189 +76,160 @@ tags: 'sitemap' # content/content.json will make sure that all pages in content/
   <div class="cs-container">
     <!-- Left Content Section-->
     <div class="cs-content">
-      <span class="cs-topper">Our Service</span>
-      <h2 class="cs-title">What We Provide To Our Customer</h2>
+      <span class="cs-topper">Our Services</span>
+      <h2 class="cs-title">Comprehensive Web Solutions</h2>
       <p class="cs-text">
-        Designed to maintain your current colour, blend out a growing root or
-        balance your blonde while providing full and demi-permanent coverage.
+        From concept to deployment, we deliver cutting-edge web solutions that
+        drive results. Our expertise spans modern frameworks, responsive design,
+        and performance optimization to bring your digital vision to life.
       </p>
     </div>
     <ul class="cs-card-group">
       <li class="cs-item">
-        <picture class="cs-icon-wrapper">
-          <img
-            class="cs-icon"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
-            width="40"
-            height="40"
-          />
-        </picture>
-        <h3 class="cs-h3">Body Treatment</h3>
+        <div class="cs-icon-wrapper">
+          <i
+            class="fas fa-laptop-code"
+            style="font-size: 40px; color: white"
+          ></i>
+        </div>
+        <h3 class="cs-h3">Custom Web Development</h3>
         <p class="cs-item-text">
-          Blanket term for a whole gamut of different holistic, non-medical,
-          physical procedures aimed at helping you achieve
+          Tailored web applications built with modern technologies like React,
+          Vue.js, and Node.js. We create scalable, maintainable solutions that
+          perfectly match your business requirements.
         </p>
-        <a href="" class="cs-link">Read More</a>
+        <a href="" class="cs-link">Learn More</a>
         <!--Background Image-->
         <picture class="cs-background">
           <img
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hair1.jpg"
-            alt="hair cut"
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="web development code"
             width="480"
             height="425"
           />
         </picture>
       </li>
       <li class="cs-item">
-        <picture class="cs-icon-wrapper">
-          <img
-            class="cs-icon"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
-            width="40"
-            height="40"
-          />
-        </picture>
-        <h3 class="cs-h3">Hair Care</h3>
+        <div class="cs-icon-wrapper">
+          <i
+            class="fas fa-mobile-alt"
+            style="font-size: 40px; color: white"
+          ></i>
+        </div>
+        <h3 class="cs-h3">Responsive Design</h3>
         <p class="cs-item-text">
-          Blanket term for a whole gamut of different holistic, non-medical,
-          physical procedures aimed at helping you achieve
+          Mobile-first designs that look stunning on every device. We ensure
+          your website provides an optimal user experience across desktops,
+          tablets, and smartphones.
         </p>
-        <a href="" class="cs-link">Read More</a>
-        <!--Background Image-->
+        <a href="" class="cs-link">Learn More</a>
+        <!--Background Imag`e-->
         <picture class="cs-background">
           <img
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hair2.jpg"
-            alt="hair cut"
+            src="https://images.unsplash.com/photo-1559028006-448665bd7c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="responsive web design"
             width="480"
             height="425"
           />
         </picture>
       </li>
       <li class="cs-item">
-        <picture class="cs-icon-wrapper">
-          <img
-            class="cs-icon"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
-            width="40"
-            height="40"
-          />
-        </picture>
-        <h3 class="cs-h3">Make Up</h3>
+        <div class="cs-icon-wrapper">
+          <i
+            class="fas fa-shopping-cart"
+            style="font-size: 40px; color: white"
+          ></i>
+        </div>
+        <h3 class="cs-h3">E-Commerce Solutions</h3>
         <p class="cs-item-text">
-          Blanket term for a whole gamut of different holistic, non-medical,
-          physical procedures aimed at helping you achieve
+          Complete online stores with secure payment processing, inventory
+          management, and user-friendly interfaces. Built with Shopify,
+          WooCommerce, or custom solutions.
         </p>
-        <a href="" class="cs-link">Read More</a>
+        <a href="" class="cs-link">Learn More</a>
         <!--Background Image-->
         <picture class="cs-background">
           <img
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hair3.jpg"
-            alt="hair cut"
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="e-commerce website"
             width="480"
             height="425"
           />
         </picture>
       </li>
       <li class="cs-item">
-        <picture class="cs-icon-wrapper">
-          <img
-            class="cs-icon"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
-            width="40"
-            height="40"
-          />
-        </picture>
-        <h3 class="cs-h3">Nail Art</h3>
+        <div class="cs-icon-wrapper">
+          <i
+            class="fas fa-tachometer-alt"
+            style="font-size: 40px; color: white"
+          ></i>
+        </div>
+        <h3 class="cs-h3">Performance Optimization</h3>
         <p class="cs-item-text">
-          Blanket term for a whole gamut of different holistic, non-medical,
-          physical procedures aimed at helping you achieve
+          Lightning-fast websites that rank higher in search results. We
+          optimize loading times, implement caching strategies, and ensure your
+          site performs at its peak.
         </p>
-        <a href="" class="cs-link">Read More</a>
+        <a href="" class="cs-link">Learn More</a>
         <!--Background Image-->
         <picture class="cs-background">
           <img
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hair1.jpg"
-            alt="hair cut"
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="website performance analytics"
             width="480"
             height="425"
           />
         </picture>
       </li>
       <li class="cs-item">
-        <picture class="cs-icon-wrapper">
-          <img
-            class="cs-icon"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
-            width="40"
-            height="40"
-          />
-        </picture>
-        <h3 class="cs-h3">Beauty Products</h3>
+        <div class="cs-icon-wrapper">
+          <i class="fas fa-tools" style="font-size: 40px; color: white"></i>
+        </div>
+        <h3 class="cs-h3">Maintenance & Support</h3>
         <p class="cs-item-text">
-          Blanket term for a whole gamut of different holistic, non-medical,
-          physical procedures aimed at helping you achieve
+          Ongoing website maintenance, security updates, and technical support
+          to keep your site running smoothly. We handle backups, monitoring, and
+          regular updates.
         </p>
-        <a href="" class="cs-link">Read More</a>
+        <a href="" class="cs-link">Learn More</a>
         <!--Background Image-->
         <picture class="cs-background">
           <img
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hair2.jpg"
-            alt="hair cut"
+            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="website maintenance"
             width="480"
             height="425"
           />
         </picture>
       </li>
       <li class="cs-item">
-        <picture class="cs-icon-wrapper">
-          <img
-            class="cs-icon"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trees-white.svg"
-            alt="hair cut"
-            width="40"
-            height="40"
-          />
-        </picture>
-        <h3 class="cs-h3">Spa Massage</h3>
+        <div class="cs-icon-wrapper">
+          <i class="fas fa-search" style="font-size: 40px; color: white"></i>
+        </div>
+        <h3 class="cs-h3">SEO Optimization</h3>
         <p class="cs-item-text">
-          Blanket term for a whole gamut of different holistic, non-medical,
-          physical procedures aimed at helping you achieve
+          Strategic SEO implementation to improve your search engine rankings.
+          We optimize content, meta tags, site structure, and technical SEO for
+          maximum visibility.
         </p>
-        <a href="" class="cs-link">Read More</a>
+        <a href="" class="cs-link">Learn More</a>
         <!--Background Image-->
         <picture class="cs-background">
           <img
             loading="lazy"
             decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hair3.jpg"
-            alt="hair cut"
+            src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="SEO analytics dashboard"
             width="480"
             height="425"
           />
@@ -261,7 +240,96 @@ tags: 'sitemap' # content/content.json will make sure that all pages in content/
 </section>
 
 <!-- ============================================ -->
-<!--                    Services                  -->
+<!--                 My Approach                 -->
+<!-- ============================================ -->
+
+<section id="why-choose-1662">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">My Approach</span>
+      <h2 class="cs-title">Building the Digital Future, One Pixel at a Time</h2>
+    </div>
+    <div class="cs-wrapper">
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-item-number">01</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Modern Tech Stack</h3>
+            <p class="cs-item-text">
+              Focused on cutting-edge technologies like React, Next.js, and
+              Tailwind CSS for optimal performance and maintainability.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-item-number">02</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">User-Centric Design</h3>
+            <p class="cs-item-text">
+              Every project begins with the end user in mind, ensuring intuitive
+              interfaces and seamless experiences across all devices.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-item-number">03</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Clean, Readable Code</h3>
+            <p class="cs-item-text">
+              Committed to writing elegant, well-documented code that's
+              maintainable and scales with your business needs.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-item-number">04</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Performance Focused</h3>
+            <p class="cs-item-text">
+              Optimization at every stage of development ensures lightning-fast
+              load times and smooth interactions.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-item-number">05</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Continuous Learning</h3>
+            <p class="cs-item-text">
+              Constantly evolving my skills to stay ahead of web development
+              trends and implement best practices.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-item-number">06</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Accessibility First</h3>
+            <p class="cs-item-text">
+              Creating inclusive web experiences that follow WCAG guidelines and
+              work for all users, regardless of ability.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-item-number">07</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Collaborative Process</h3>
+            <p class="cs-item-text">
+              Working closely with you through every stage from concept to
+              deployment, ensuring your vision comes to life.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                    Portfolio                 -->
 <!-- ============================================ -->
 
 <section id="services-1329">
@@ -269,31 +337,32 @@ tags: 'sitemap' # content/content.json will make sure that all pages in content/
     <div class="cs-content">
       <div class="cs-flex-group">
         <span class="cs-topper">Portfolio</span>
-        <h2 class="cs-title">View Work Samples</h2>
+        <h2 class="cs-title">Featured Web Development Projects</h2>
       </div>
       <p class="cs-text">
-        In the new era of technology we look in the future with certainty and
-        for any post types, or just they are so much great of all to a program.
+        A curated selection of my recent web development work. Each project
+        showcases my expertise in modern web technologies, responsive design,
+        and performance optimization.
       </p>
     </div>
     <ul class="cs-card-group">
       <li class="cs-item">
         <a href="" class="cs-link">
-          <span class="cs-number">01</span>
-          <h3 class="cs-h3">Audit & Assurance</h3>
-          <p class="cs-item-text">We consider all the drivers</p>
+
+          <h3 class="cs-h3">E-Commerce Platform</h3>
+          <p class="cs-item-text">React, Node.js, MongoDB, Stripe</p>
         </a>
         <picture class="cs-picture">
           <source
             media="(max-width: 600px)"
             srcset="
-              https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/finance-screen.jpg
+              https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80
             "
           />
           <source
             media="(min-width: 601px)"
             srcset="
-              https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/finance-screen.jpg
+              https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80
             "
           />
           <img
@@ -305,35 +374,25 @@ tags: 'sitemap' # content/content.json will make sure that all pages in content/
             aria-hidden="true"
           />
         </picture>
-        <!--On Hover Image-->
-        <img
-          class="cs-arrow"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Icon.svg"
-          alt="arrow"
-          width="412"
-          height="249"
-          aria-hidden="true"
-        />
+
       </li>
       <li class="cs-item">
         <a href="" class="cs-link">
           <span class="cs-number">02</span>
-          <h3 class="cs-h3">Tax Advisory Services</h3>
-          <p class="cs-item-text">We consider all the drivers</p>
+          <h3 class="cs-h3">SaaS Dashboard</h3>
+          <p class="cs-item-text">Vue.js, TypeScript, D3.js, Firebase</p>
         </a>
         <picture class="cs-picture">
           <source
             media="(max-width: 600px)"
             srcset="
-              https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/finance-reading.jpg
+              https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80
             "
           />
           <source
             media="(min-width: 601px)"
             srcset="
-              https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/finance-reading.jpg
+              https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80
             "
           />
           <img
@@ -345,33 +404,25 @@ tags: 'sitemap' # content/content.json will make sure that all pages in content/
             aria-hidden="true"
           />
         </picture>
-        <!--On Hover Image-->
-        <img
-          class="cs-arrow"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Icon.svg"
-          alt="arrow"
-          width="412"
-          height="249"
-          aria-hidden="true"
-        />
+
       </li>
       <li class="cs-item">
         <a href="" class="cs-link">
           <span class="cs-number">03</span>
-          <h3 class="cs-h3">Year-End Tax Planning</h3>
-          <p class="cs-item-text">We consider all the drivers</p>
+          <h3 class="cs-h3">Corporate Website</h3>
+          <p class="cs-item-text">Next.js, Tailwind CSS, Sanity CMS</p>
         </a>
         <picture class="cs-picture">
           <source
             media="(max-width: 600px)"
-            srcset="https://csimg.nyc3.cdn.digita loceanspaces.com/Images/MISC/finance-laptop.png"
+            srcset="
+              https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80
+            "
           />
           <source
             media="(min-width: 601px)"
             srcset="
-              https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/finance-laptop.jpg
+              https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80
             "
           />
           <img
@@ -383,17 +434,7 @@ tags: 'sitemap' # content/content.json will make sure that all pages in content/
             aria-hidden="true"
           />
         </picture>
-        <!--On Hover Image-->
-        <img
-          class="cs-arrow"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Icon.svg"
-          alt="arrow"
-          width="412"
-          height="249"
-          aria-hidden="true"
-        />
+
       </li>
     </ul>
   </div>
