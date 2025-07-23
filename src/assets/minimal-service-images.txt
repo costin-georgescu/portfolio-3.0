@@ -1,0 +1,36 @@
+Minimal Service Background Images
+
+These are suggested minimal graphics for each service card that align with the dark theme aesthetic and provide a subtle, professional background on hover:
+
+1. Custom Web Development:
+https://images.unsplash.com/photo-1607706189992-eae578626c86?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80
+- Minimal code editor with dark theme and subtle syntax highlighting
+
+2. Responsive Design:
+https://images.unsplash.com/photo-1616469829581-73993eb86b02?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80
+- Abstract device outlines on dark background showing responsive layout concept
+
+3. E-Commerce Solutions:
+https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80
+- Minimal shopping cart icon with subtle grid background
+
+4. Performance Optimization:
+https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80
+- Speed gauge or minimal dashboard with performance metrics
+
+5. Maintenance & Support:
+https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80
+- Abstract gears or tools on dark background
+
+6. SEO Optimization:
+https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80
+- Search ranking visualization or analytics graph on dark background
+
+These images are selected to be:
+1. Minimal and non-distracting
+2. Dark-themed to match the site aesthetic
+3. Abstract rather than literal
+4. Professional and modern
+5. Relevant to each service
+
+To implement, replace the current image URLs in the src/index.html file for each service card.
