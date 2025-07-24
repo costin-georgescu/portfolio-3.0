@@ -22,20 +22,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Create .nojekyll file
+        run: touch .nojekyll
+
       - name: Build site
         run: |
           npm run build:eleventy
-          # List all files in the root directory
-          echo "Current directory structure:"
-          ls -la
-          # Check if _site exists
-          if [ -d "_site" ]; then
-            echo "_site directory exists"
-            ls -la _site/
-          else
-            echo "_site directory does not exist, checking other locations"
-            find . -type d -name "*site*" -o -name "*dist*" -o -name "*build*" | sort
-          fi
+          # Verify the build output
+          ls -la _site/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -47,12 +41,4 @@ jobs:
           clean-exclude: |
             .git
             .github
-            .gitignore
-            README.md
-            node_modules/
-            src/
-            .eleventy.js
-            .gitignore
-            package.json
-            package-lock.json
-            netlify.toml
+          force: true
