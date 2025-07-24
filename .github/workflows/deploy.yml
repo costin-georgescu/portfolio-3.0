@@ -5,7 +5,6 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Set the permissions at the workflow level
 permissions:
   contents: write
   pages: write
@@ -37,9 +36,19 @@ jobs:
 
       - name: Build site
         run: |
+          # Set the base URL for production
+          export BASE_URL="/"
+
+          # Install dependencies and build
           npm run build:eleventy
+
+          # Create .nojekyll file
           touch public/.nojekyll
+
+          # Verify the build output
           ls -la public/
+          echo "--- Assets directory ---"
+          ls -la public/assets/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
