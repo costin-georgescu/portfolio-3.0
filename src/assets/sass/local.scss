@@ -616,211 +616,6 @@
 }
 
 /*-- -------------------------- -->
-<---          Footer            -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #footer-1390 {
-    padding: var(--sectionPadding);
-    background-color: var(--backgroundColorDark);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    z-index: 1;
-
-    .cs-container {
-      width: 100%;
-      max-width: calc(1280 / 16 * 1rem);
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .cs-top {
-      width: 100%;
-      margin-bottom: calc(40 / 16 * 1rem);
-      padding-bottom: clamp(1.5rem, 5vw, 4rem);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      /* 24px - 40px */
-      gap: clamp(1.25rem, 4vw, 2.5rem);
-    }
-
-    .cs-ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      row-gap: calc(8 / 16 * 1rem);
-      /* 24px - 36px */
-      column-gap: clamp(1.5rem, 4vw, 2.25rem);
-    }
-
-    .cs-li {
-      list-style: none;
-    }
-
-    .cs-link {
-      font-size: clamp(0.9375rem, 1.5vw, 1rem);
-      line-height: 1.5em;
-      text-decoration: none;
-      margin: 0;
-      color: var(--bodyTextColorWhite);
-      opacity: 0.9;
-      display: block;
-      transition: all 0.3s ease;
-      padding: 0.5rem 0;
-
-      &:hover {
-        color: var(--primary);
-        opacity: 1;
-        transform: translateX(5px);
-      }
-    }
-
-    .cs-logo {
-      width: 100%;
-      max-width: calc(200 / 16 * 1rem);
-      height: auto;
-      display: block;
-      margin-bottom: 1.5rem;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: translateY(-3px);
-      }
-
-      .cs-logo-img {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    .cs-logo-img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .cs-bottom {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: calc(16 / 16 * 1rem);
-      color: var(--bodyTextColorWhite);
-      opacity: 0.7;
-      font-size: 0.9rem;
-
-      a {
-        color: var(--primary);
-        text-decoration: none;
-        transition: all 0.3s ease;
-
-        &:hover {
-          opacity: 1;
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .cs-social {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: calc(8 / 16 * 1rem);
-    }
-
-    .cs-social-li {
-      list-style: none;
-    }
-
-    .cs-social-link {
-      width: calc(32 / 16 * 1rem);
-      height: calc(32 / 16 * 1rem);
-      background-color: #484848;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background-color 0.3s;
-      &:hover {
-        background-color: var(--primary);
-
-        .cs-social-icon {
-          filter: grayscale(1) brightness(1000%);
-          opacity: 1;
-        }
-      }
-    }
-
-    .cs-social-icon {
-      width: calc(12 / 16 * 1rem);
-      height: auto;
-      display: block;
-      opacity: 0.6;
-      transition: opacity 0.3s;
-    }
-
-    .cs-copyright {
-      font-size: calc(16 / 16 * 1rem);
-      color: #bababa;
-      line-height: 1.5em;
-      margin: 0;
-      display: block;
-    }
-
-    .cs-copyright-link,
-    .cs-separater {
-      font-size: calc(16 / 16 * 1rem);
-      text-decoration: none;
-      color: #bababa;
-      transition: color 0.3s;
-
-      &:hover {
-        color: var(--primary);
-      }
-    }
-
-    .cs-separater {
-      margin: 0 calc(16 / 16 * 1rem);
-      display: inline-block;
-    }
-  }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #footer-1390 {
-    .cs-top {
-      align-items: flex-start;
-    }
-
-    .cs-bottom {
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    .cs-flex {
-      margin: 0 auto;
-    }
-
-    .cs-social {
-      /* sends it to the right in the 3rd position */
-      order: 3;
-    }
-  }
-}
-
-/*-- -------------------------- -->
 <---          Reviews          -->
 <--- -------------------------- -*/
 
@@ -1082,11 +877,42 @@
       padding-bottom: clamp(1.5rem, 5vw, 4rem);
       border-bottom: 1px solid #484848;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
       /* 24px - 40px */
       gap: clamp(1.25rem, 4vw, 2.5rem);
+
+      .logo {
+        width: 18.4%;
+        max-width: calc(350 / 16 * 1.6rem);
+        height: calc(32 / 16 * 1.6rem);
+        /* margin-right auto pushes everything away from it to the right */
+        margin: 0 auto 0 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(8 / 16 * 1rem);
+        z-index: 100;
+        text-decoration: none; /* Remove underline from the link */
+        color: var(--bodyTextColorWhite); /* Set the text color to dark gray */
+        .logo-text {
+          color: inherit; /* Inherit the color from the parent */
+          text-decoration: none; /* Ensure no underline on the text */
+          margin: 0; /* Remove any default margins */
+          font-size: 1.8rem; /* Adjust the font size as needed */
+          font-weight: 800; /* Make the text slightly bolder */
+        }
+
+        img {
+          width: auto;
+          height: 100%;
+          /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
+          object-fit: contain;
+          border-radius: 10px;
+        }
+      }
     }
 
     .cs-ul {
@@ -1121,16 +947,17 @@
     }
 
     .cs-logo {
-      width: 100%;
-      max-width: calc(209 / 16 * 1rem);
-      height: auto;
-      display: block;
-    }
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    .cs-logo-img {
-      width: 100%;
-      height: auto;
-      display: block;
+      .cs-logo-text {
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        line-height: 1.5em;
+        font-weight: 700;
+        margin: 0 0 0.25rem 0;
+        color: var(--bodyTextColorWhite);
+      }
     }
 
     .cs-bottom {
@@ -1213,6 +1040,37 @@
   #footer-1390 {
     .cs-top {
       align-items: flex-start;
+
+      .logo {
+        width: 18.4%;
+        max-width: calc(350 / 16 * 1.6rem);
+        height: calc(32 / 16 * 1.6rem);
+        /* margin-right auto pushes everything away from it to the right */
+        margin: 0 auto 0 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: calc(8 / 16 * 1rem);
+        z-index: 100;
+        text-decoration: none; /* Remove underline from the link */
+        color: var(--bodyTextColorWhite); /* Set the text color to dark gray */
+        .logo-text {
+          color: inherit; /* Inherit the color from the parent */
+          text-decoration: none; /* Ensure no underline on the text */
+          margin: 0; /* Remove any default margins */
+          font-size: 1.8rem; /* Adjust the font size as needed */
+          font-weight: 800; /* Make the text slightly bolder */
+        }
+
+        img {
+          width: auto;
+          height: 100%;
+          /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
+          object-fit: contain;
+          border-radius: 10px;
+        }
+      }
     }
 
     .cs-bottom {
