@@ -1,4 +1,7 @@
 module.exports = function(eleventyConfig) {
+  // Ignore blog posts during build
+  eleventyConfig.ignores = eleventyConfig.ignores || [];
+  eleventyConfig.ignores.push('src/content/blog/**/*');
   // Copy all assets to the output directory
   eleventyConfig.addPassthroughCopy({
     'src/assets': '/assets',
