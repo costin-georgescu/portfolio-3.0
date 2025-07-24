@@ -9,7 +9,7 @@
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
         "start": "run-p watch:*",
         "build": "run-s build:*",
-        "build:prod": "rm -rf public && mkdir -p public && npm run build:eleventy && cp -r src/assets public/ && cp src/robots.txt src/sitemap.xml public/ && touch public/.nojekyll"
+        "build:prod": "rm -rf public && mkdir -p public && npm run build:eleventy && cp -r src/assets public/ && touch public/.nojekyll"
     },
     "repository": {
         "type": "git",
