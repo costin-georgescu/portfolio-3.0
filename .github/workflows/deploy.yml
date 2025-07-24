@@ -37,7 +37,7 @@ jobs:
       - name: Build site
         run: |
           # Install dependencies and build
-          npm run build:prod
+          npx cross-env ELEVENTY_ENV=PROD npm run build:prod
           
           # Verify the build output
           echo "--- Root directory ---"
