@@ -22,6 +22,8 @@ module.exports = function(eleventyConfig) {
     templateFormats: ['html', 'njk', 'md', '11ty.js'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
     passthroughFileCopy: true
   };
 };
