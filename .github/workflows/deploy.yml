@@ -36,19 +36,21 @@ jobs:
 
       - name: Build site
         run: |
-          # Set the base URL for production
-          export BASE_URL="/"
-
           # Install dependencies and build
-          npm run build:eleventy
-
-          # Create .nojekyll file
-          touch public/.nojekyll
-
+          npm run build:prod
+          
           # Verify the build output
+          echo "--- Root directory ---"
           ls -la public/
-          echo "--- Assets directory ---"
+          echo -e "\n--- Assets directory ---"
           ls -la public/assets/
+          echo -e "\n--- CSS files ---"
+          find public/assets -name "*.css" | sort
+          echo -e "\n--- Build complete ---"
+          
+          # Verify CSS files have content
+          echo -e "\n--- CSS file contents ---"
+          find public/assets -name "*.css" -exec sh -c 'echo "\nFile: {}"; head -n 5 {}' \;
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
