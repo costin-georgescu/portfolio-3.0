@@ -23,10 +23,19 @@ jobs:
         run: npm ci
 
       - name: Build site
-        run: npm run build:eleventy
-
-      - name: List files (for debugging)
-        run: ls -la
+        run: |
+          npm run build:eleventy
+          # List all files in the root directory
+          echo "Current directory structure:"
+          ls -la
+          # Check if _site exists
+          if [ -d "_site" ]; then
+            echo "_site directory exists"
+            ls -la _site/
+          else
+            echo "_site directory does not exist, checking other locations"
+            find . -type d -name "*site*" -o -name "*dist*" -o -name "*build*" | sort
+          fi
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
