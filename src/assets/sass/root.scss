@@ -463,7 +463,6 @@
       z-index: 10;
       box-shadow: 0 8px 20px rgba(50, 69, 71, 0.3);
       transition: box-shadow 0.3s ease;
-      
       &:hover:not(.cs-active &) {
         box-shadow: 0 10px 25px rgba(50, 69, 71, 0.4);
       }
@@ -654,7 +653,7 @@
       margin: 0;
       display: inline-block;
       position: relative;
-      color: var(--bodyTextColor) !important;
+      color: var(--bodyTextColorWhite) !important;
 
       &:before {
         /* active state underline */

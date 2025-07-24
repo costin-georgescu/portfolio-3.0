@@ -147,6 +147,19 @@
         box-shadow: 0 10px 25px rgba(255, 106, 62, 0.4);
       }
     }
+
+    @media only screen and (max-width: 720px) {
+      .cs-container {
+        flex-direction: column;
+        align-items: flex-start;
+
+        img {
+          padding-top: calc(40 / 16 * 1rem);
+          max-width: 90%;
+          margin: auto;
+        }
+      }
+    }
   }
 }
 
