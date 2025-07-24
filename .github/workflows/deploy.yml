@@ -29,12 +29,12 @@ jobs:
         run: |
           npm run build:eleventy
           # Verify the build output
-          ls -la _site/
+          ls -la public/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: _site
+          folder: public # Changed from _site to public
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           clean: true
