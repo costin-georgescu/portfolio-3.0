@@ -6,10 +6,12 @@
     "scripts": {
         "watch:cms": "npx decap-server",
         "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
+        "watch:sass": "node build-css.js",
+        "build:sass": "node build-css.js",
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
-        "start": "run-p watch:*",
+        "start": "npm run build:sass && run-p watch:*",
         "build": "run-s build:*",
-        "build:prod": "rm -rf public && mkdir -p public && npm run build:eleventy && cp -r src/assets public/ && touch public/.nojekyll"
+        "build:prod": "rm -rf public && mkdir -p public && npm run build:sass && npm run build:eleventy && cp -r src/assets public/ && touch public/.nojekyll"
     },
     "repository": {
         "type": "git",
