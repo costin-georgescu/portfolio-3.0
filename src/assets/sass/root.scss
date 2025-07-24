@@ -388,7 +388,7 @@
 
     &.cs-active {
       .cs-toggle {
-        transform: rotate(180deg);
+        transform: translateY(0);
       }
 
       .cs-ul-wrapper {
@@ -430,7 +430,7 @@
         display: flex;
         align-items: center;
         text-decoration: none;
-        
+
         img {
           width: 40px;
           height: 40px;
@@ -438,7 +438,7 @@
           margin-right: 12px;
           object-fit: cover;
         }
-        
+
         .logo-text {
           color: var(--bodyTextColorWhite);
           font-size: 1.25rem;
@@ -452,15 +452,22 @@
       width: calc(56 / 16 * 1rem);
       height: calc(56 / 16 * 1rem);
       margin: 0 0 0 auto;
-      background-color: #1a1a1a;
-      border: none;
-      border-radius: calc(4 / 16 * 1rem);
+      /* Updated background to match service cards */
+      background: linear-gradient(135deg, #324547 0%, #4a686b 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: calc(12 / 16 * 1rem);
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
       z-index: 10;
-      transition: transform 0.6s;
+      box-shadow: 0 8px 20px rgba(50, 69, 71, 0.3);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      
+      &:hover {
+        box-shadow: 0 10px 25px rgba(50, 69, 71, 0.4);
+        transform: translateY(-3px);
+      }
     }
 
     .cs-nav {
@@ -522,6 +529,9 @@
       width: clamp(1.5rem, 2vw, 1.75rem);
       height: calc(16 / 16 * 1rem);
       position: relative;
+      /* Added subtle glass-morphism effect */
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease;
     }
 
     .cs-line {
@@ -532,6 +542,8 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
+      /* Added subtle glow effect */
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
     }
 
     .cs-line1 {
@@ -563,8 +575,10 @@
       width: 20%;
       height: auto;
       max-height: 70vh;
-      background-color: #fff;
-      border-radius: 0 0 calc(24 / 16 * 1rem) calc(24 / 16 * 1rem);
+      background-color: rgba(40, 50, 52, 0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
       position: absolute;
       top: 20%;
       right: 0;
@@ -572,9 +586,9 @@
       z-index: -1;
       overflow: hidden;
       transform: scaleY(0);
-      transition: transform 0.3s, width 0.5s, top 0.3s;
-      transition-delay: width 0.3s;
+      transition: transform 0.3s, width 0.5s, top 0.3s, background-color 0.3s;
       transform-origin: top right;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     .cs-ul {
