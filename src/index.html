@@ -7,7 +7,7 @@ tags: 'sitemap' # content/content.json will make sure that all pages in content/
 
 {% extends "layouts/base.html" %} {% block head %}
 <!-- Critical styles are loaded first -->
-<link rel="stylesheet" href="/assets/css/critical.css" />
+<link rel="stylesheet" href="{{ '/assets/css/critical.css' | url }}" />
 <!-- Font Awesome for icons -->
 <link
   rel="stylesheet"
@@ -18,7 +18,7 @@ tags: 'sitemap' # content/content.json will make sure that all pages in content/
 />
 
 <!-- Load local styles directly for better reliability -->
-<link rel="stylesheet" href="/assets/css/local.css" />
+<link rel="stylesheet" href="{{ '/assets/css/local.css' | url }}" />
 
 <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
 <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->

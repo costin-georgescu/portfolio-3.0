@@ -1,0 +1,667 @@
+<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Standard meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Meta description for the page">
+        <link rel="canonical" href="https://www.example.com/">
+        <meta name="generator" content="Eleventy v3.1.1">
+
+        <!--Social Media Display-->
+        <meta property="og:title" content="Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"/>
+        <meta property="og:description" content="Meta description for the page"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.example.com/"/>
+        <meta property="og:image" content="/assets/images/logo-small.png"/>
+        <meta property="og:image:secure_url" content="/assets/images/logo-small.png"/>
+
+        <!--Favicons-->
+        <!-- https://realfavicongenerator.net/ -->
+        <link rel="icon" type="image/png" href="/portfolio-3.0/assets/favicons/favicon-96x96.png" sizes="96x96"/>
+        <link rel="icon" type="image/svg+xml" href="/portfolio-3.0/assets/favicons/favicon.svg"/>
+        <link rel="shortcut icon" href="/portfolio-3.0/assets/favicons/favicon.ico"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/portfolio-3.0/assets/favicons/apple-touch-icon.png"/>
+        <meta name="apple-mobile-web-app-title" content="Starter Kit"/>
+        <link rel="manifest" href="/portfolio-3.0/assets/favicons/site.webmanifest"/>
+
+        <!-- Preloads -->
+        <link rel="preload" as="image" href="/portfolio-3.0/assets/svgs/logo-black.svg">
+        <link rel="preload" as="font" type="font/woff2" href="/portfolio-3.0/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
+        <link rel="preload" as="font" type="font/woff2" href="/portfolio-3.0/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+
+        <!-- Sitewide Stylesheets and Scripts -->
+        <link rel="stylesheet" href="/portfolio-3.0/assets/css/root.css">
+        <script defer src="/portfolio-3.0/assets/js/dark.js"></script>
+        <script defer src="/portfolio-3.0/assets/js/nav.js"></script>
+
+        
+<!-- Critical styles are loaded first -->
+<link rel="stylesheet" href="/portfolio-3.0/assets/css/critical.css" />
+<!-- Font Awesome for icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<!-- Load local styles directly for better reliability -->
+<link rel="stylesheet" href="/portfolio-3.0/assets/css/local.css" />
+
+<!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+<!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+<!-- <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Code Stitch Web Designs",
+        
+        "telephone": "(555) 779-4407",
+        "email": "help@codestitch.app",
+        
+            "address": {
+                "@type": "PostalAddress",
+                    "streetAddress": "First Address Line, Second Address Line",
+                    "addressLocality": "Denver",
+                    "addressRegion": "CO",
+                    "postalCode": "80206",
+                    "addressCountry": "US"},
+        
+        "url": "https://www.example.com/",
+        
+            "sameAs": ["https://www.facebook.com/","https://www.instagram.com/"]
+        
+    }
+</script> -->
+
+
+        <title>Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO</title>
+    </head>
+    <body>
+        <!--Screen reader skip main nav-->
+        <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+        <!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+  <div class="cs-container">
+    <!--Nav Logo-->
+    <!--Logo is turned white in the css with a filter on dark mode-->
+    <div class="logo-container">
+      <a href="/portfolio-3.0/" class="logo" aria-label="back to home">
+        <img
+          src="/portfolio-3.0/assets/images/cg-logo.jpg"
+          alt="logo"
+          width="210"
+          height="29"
+          aria-hidden="true"
+          decoding="async"
+        />
+        <h1 class="logo-text">Costin</h1>
+      </a>
+    </div>
+    <!--Navigation List-->
+    <nav class="cs-nav" role="navigation">
+      <!--Mobile Nav Toggle-->
+      <button class="cs-toggle" aria-label="mobile menu toggle">
+        <div class="cs-box" aria-hidden="true">
+          <span class="cs-line cs-line1" aria-hidden="true"></span>
+          <span class="cs-line cs-line2" aria-hidden="true"></span>
+          <span class="cs-line cs-line3" aria-hidden="true"></span>
+        </div>
+      </button>
+      <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+      <div class="cs-ul-wrapper">
+        <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+          <li class="cs-li">
+            <a href="" class="cs-li-link cs-active"> Home </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> About </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link">Services </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> Blog </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> Contact </a>
+          </li>
+          <li class="cs-li cs-cta">
+            <a href="" class="cs-button-6" aria-label="read more about us">
+              Book a quick call
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+        <main id="main">
+            
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1059">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h1 class="cs-title">Crafting Digital Experiences That Inspire</h1>
+      <p class="cs-text">
+        I design and develop beautiful, functional websites that bring your
+        vision to life with clean code and modern design principles.
+      </p>
+      <a href="" class="cs-button-solid">Book a call with me</a>
+    </div>
+
+    <div class="cs-content laptop-image-container">
+      <picture>
+        <source srcset="/assets/images/test.png" />
+        <img
+          class="laptop-image"
+          decoding="async"
+          src="/assets/images/test.png"
+          alt="laptop"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-964">
+  <div class="cs-container">
+    <!-- Left Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">Our Services</span>
+      <h2 class="cs-title">Comprehensive Web Solutions</h2>
+      <p class="cs-text">
+        From concept to deployment, we deliver cutting-edge web solutions that
+        drive results. Our expertise spans modern frameworks, responsive design,
+        and performance optimization to bring your digital vision to life.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-icon-wrapper">
+          <i
+            class="fas fa-laptop-code"
+            style="font-size: 40px; color: white"
+          ></i>
+        </div>
+        <h3 class="cs-h3">Custom Web Development</h3>
+        <p class="cs-item-text">
+          Tailored web applications built with modern technologies like React,
+          Vue.js, and Node.js. We create scalable, maintainable solutions that
+          perfectly match your business requirements.
+        </p>
+        <a href="" class="cs-link">Learn More</a>
+        <!-- Background image removed for cleaner design -->
+      </li>
+      <li class="cs-item">
+        <div class="cs-icon-wrapper">
+          <i
+            class="fas fa-mobile-alt"
+            style="font-size: 40px; color: white"
+          ></i>
+        </div>
+        <h3 class="cs-h3">Responsive Design</h3>
+        <p class="cs-item-text">
+          Mobile-first designs that look stunning on every device. We ensure
+          your website provides an optimal user experience across desktops,
+          tablets, and smartphones.
+        </p>
+        <a href="" class="cs-link">Learn More</a>
+        <!-- Background image removed for cleaner design -->
+      </li>
+      <li class="cs-item">
+        <div class="cs-icon-wrapper">
+          <i
+            class="fas fa-shopping-cart"
+            style="font-size: 40px; color: white"
+          ></i>
+        </div>
+        <h3 class="cs-h3">E-Commerce Solutions</h3>
+        <p class="cs-item-text">
+          Complete online stores with secure payment processing, inventory
+          management, and user-friendly interfaces. Built with Shopify,
+          WooCommerce, or custom solutions.
+        </p>
+        <a href="" class="cs-link">Learn More</a>
+        <!-- Background image removed for cleaner design -->
+      </li>
+      <li class="cs-item">
+        <div class="cs-icon-wrapper">
+          <i
+            class="fas fa-tachometer-alt"
+            style="font-size: 40px; color: white"
+          ></i>
+        </div>
+        <h3 class="cs-h3">Performance Optimization</h3>
+        <p class="cs-item-text">
+          Lightning-fast websites that rank higher in search results. We
+          optimize loading times, implement caching strategies, and ensure your
+          site performs at its peak.
+        </p>
+        <a href="" class="cs-link">Learn More</a>
+        <!-- Background image removed for cleaner design -->
+      </li>
+      <li class="cs-item">
+        <div class="cs-icon-wrapper">
+          <i class="fas fa-tools" style="font-size: 40px; color: white"></i>
+        </div>
+        <h3 class="cs-h3">Maintenance & Support</h3>
+        <p class="cs-item-text">
+          Ongoing website maintenance, security updates, and technical support
+          to keep your site running smoothly. We handle backups, monitoring, and
+          regular updates.
+        </p>
+        <a href="" class="cs-link">Learn More</a>
+        <!-- Background image removed for cleaner design -->
+      </li>
+      <li class="cs-item">
+        <div class="cs-icon-wrapper">
+          <i class="fas fa-search" style="font-size: 40px; color: white"></i>
+        </div>
+        <h3 class="cs-h3">SEO Optimization</h3>
+        <p class="cs-item-text">
+          Strategic SEO implementation to improve your search engine rankings.
+          We optimize content, meta tags, site structure, and technical SEO for
+          maximum visibility.
+        </p>
+        <a href="" class="cs-link">Learn More</a>
+        <!-- Background image removed for cleaner design -->
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 My Approach                 -->
+<!-- ============================================ -->
+
+<section id="why-choose-1662">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">My Approach</span>
+      <h2 class="cs-title">Building the Digital Future, One Pixel at a Time</h2>
+    </div>
+    <div class="cs-wrapper">
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-item-number">01</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Modern Tech Stack</h3>
+            <p class="cs-item-text">
+              Focused on cutting-edge technologies like React, Next.js, and
+              Tailwind CSS for optimal performance and maintainability.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-item-number">02</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">User-Centric Design</h3>
+            <p class="cs-item-text">
+              Every project begins with the end user in mind, ensuring intuitive
+              interfaces and seamless experiences across all devices.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-item-number">03</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Clean, Readable Code</h3>
+            <p class="cs-item-text">
+              Committed to writing elegant, well-documented code that's
+              maintainable and scales with your business needs.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-item-number">04</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Performance Focused</h3>
+            <p class="cs-item-text">
+              Optimization at every stage of development ensures lightning-fast
+              load times and smooth interactions.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-item-number">05</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Continuous Learning</h3>
+            <p class="cs-item-text">
+              Constantly evolving my skills to stay ahead of web development
+              trends and implement best practices.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-item-number">06</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Accessibility First</h3>
+            <p class="cs-item-text">
+              Creating inclusive web experiences that follow WCAG guidelines and
+              work for all users, regardless of ability.
+            </p>
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-item-number">07</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Collaborative Process</h3>
+            <p class="cs-item-text">
+              Working closely with you through every stage from concept to
+              deployment, ensuring your vision comes to life.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                    Portfolio                 -->
+<!-- ============================================ -->
+
+<section id="services-1329">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex-group">
+        <span class="cs-topper">Portfolio</span>
+        <h2 class="cs-title">Featured Web Development Projects</h2>
+      </div>
+      <p class="cs-text">
+        A curated selection of my recent web development work. Each project
+        showcases my expertise in modern web technologies, responsive design,
+        and performance optimization.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <h3 class="cs-h3">E-Commerce Platform</h3>
+          <p class="cs-item-text">React, Node.js, MongoDB, Stripe</p>
+        </a>
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80
+            "
+          />
+          <img
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/finance-screen.jpg"
+            alt="finance"
+            width="413"
+            height="374"
+            aria-hidden="true"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <span class="cs-number">02</span>
+          <h3 class="cs-h3">SaaS Dashboard</h3>
+          <p class="cs-item-text">Vue.js, TypeScript, D3.js, Firebase</p>
+        </a>
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80
+            "
+          />
+          <img
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/finance-reading.jpg"
+            alt="finance"
+            width="413"
+            height="374"
+            aria-hidden="true"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <a href="" class="cs-link">
+          <span class="cs-number">03</span>
+          <h3 class="cs-h3">Corporate Website</h3>
+          <p class="cs-item-text">Next.js, Tailwind CSS, Sanity CMS</p>
+        </a>
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80
+            "
+          />
+          <img
+            decoding="async"
+            src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/finance-laptop.jpg"
+            alt="finance"
+            width="413"
+            height="374"
+            aria-hidden="true"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-497">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Feedback</span>
+      <h2 class="cs-title">What Our Clients Say About Us</h2>
+      <p class="cs-text">
+        Non curabitur gravida arcu ac tortor dignissim convallis aenean. Dui id
+        ornare arcu odio. Sodales ut eu sem integer vitae justo eget magna. Duis
+        tristique sollicitudin nibh sit amet commodo nulla facilisi nullam
+      </p>
+      <a href="" class="cs-button-solid">Get in Touch</a>
+    </div>
+    <div class="cs-review">
+      <p class="cs-review-text">
+        Consequat nisl vel pretium lectus quam id leo. Mauris augue neque
+        gravida in fermentum et sollicitudin ac orci. Blandit libero volutpat
+        sed cras ornare
+      </p>
+      <img
+        class="cs-profile"
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/profile1.png"
+        alt="profile"
+        width="60"
+        height="60"
+      />
+      <div class="cs-info">
+        <span class="cs-name">Rene Rodriguez</span>
+        <span class="cs-location">Acelerisque</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        </main>
+        <!-- ============================================ -->
+<!--                  Footer                      -->
+<!-- ============================================ -->
+
+<footer id="footer-1390">
+  <div class="cs-container">
+    <div class="cs-top">
+      <a aria-label="go back to home" class="logo" href="">
+        <img
+          src="../assets/images/cg-logo.jpg"
+          alt="logo"
+          width="210"
+          height="29"
+          aria-hidden="true"
+          decoding="async"
+        />
+        <h1 class="logo-text">Costin</h1>
+      </a>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <a href="" class="cs-link">Home</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">About</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Services</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Blog</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-bottom">
+      <!--Social-->
+      <ul class="cs-social">
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="facebook"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="twitter"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="instagram"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="twitter"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+      </ul>
+      <span class="cs-copyright">
+        © Copyright 2025 -
+        <a href="" class="cs-copyright-link">Costin Georgescu</a>
+      </span>
+      <div class="cs-flex">
+        <a href="" class="cs-copyright-link">Privacy Policy</a>
+        <span class="cs-separater">|</span>
+        <a href="" class="cs-copyright-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </body>
+</html>

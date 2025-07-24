@@ -1,0 +1,302 @@
+<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Standard meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Meta description for the page">
+        <link rel="canonical" href="https://www.example.com/blog/">
+        <meta name="generator" content="Eleventy v3.1.1">
+
+        <!--Social Media Display-->
+        <meta property="og:title" content="Blog | Code Stitch Web Designs"/>
+        <meta property="og:description" content="Meta description for the page"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.example.com/blog/"/>
+        <meta property="og:image" content="/assets/images/logo-small.png"/>
+        <meta property="og:image:secure_url" content="/assets/images/logo-small.png"/>
+
+        <!--Favicons-->
+        <!-- https://realfavicongenerator.net/ -->
+        <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96"/>
+        <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg"/>
+        <link rel="shortcut icon" href="/assets/favicons/favicon.ico"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"/>
+        <meta name="apple-mobile-web-app-title" content="Starter Kit"/>
+        <link rel="manifest" href="/assets/favicons/site.webmanifest"/>
+
+        <!-- Preloads -->
+        <link rel="preload" as="image" href="/assets/svgs/logo-black.svg">
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+
+        <!-- Sitewide Stylesheets and Scripts -->
+        <link rel="stylesheet" href="/assets/css/root.css">
+        <script defer src="/assets/js/dark.js"></script>
+        <script defer src="/assets/js/nav.js"></script>
+
+        
+    <link rel="preload" as="image" href="/assets/images/cabinets-8aadd008.avif"/>
+    <link rel="stylesheet" href="/assets/css/blog.css">
+
+
+        <title>Blog | Code Stitch Web Designs</title>
+    </head>
+    <body>
+        <!--Screen reader skip main nav-->
+        <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+        <!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+  <div class="cs-container">
+    <!--Nav Logo-->
+    <!--Logo is turned white in the css with a filter on dark mode-->
+    <div class="logo-container">
+      <a href="/" class="logo" aria-label="back to home">
+        <img
+          src="/assets/images/cg-logo.jpg"
+          alt="logo"
+          width="210"
+          height="29"
+          aria-hidden="true"
+          decoding="async"
+        />
+        <h1 class="logo-text">Costin</h1>
+      </a>
+    </div>
+    <!--Navigation List-->
+    <nav class="cs-nav" role="navigation">
+      <!--Mobile Nav Toggle-->
+      <button class="cs-toggle" aria-label="mobile menu toggle">
+        <div class="cs-box" aria-hidden="true">
+          <span class="cs-line cs-line1" aria-hidden="true"></span>
+          <span class="cs-line cs-line2" aria-hidden="true"></span>
+          <span class="cs-line cs-line3" aria-hidden="true"></span>
+        </div>
+      </button>
+      <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+      <div class="cs-ul-wrapper">
+        <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+          <li class="cs-li">
+            <a href="" class="cs-li-link cs-active"> Home </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> About </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link">Services </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> Blog </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> Contact </a>
+          </li>
+          <li class="cs-li cs-cta">
+            <a href="" class="cs-button-6" aria-label="read more about us">
+              Book a quick call
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+        <main id="main">
+            
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <span class="cs-int-title">Blog</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/blog/" class="cs-link cs-active">Blog</a>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/cabinets-8aadd008.avif" type="image/avif">
+            <source media="(max-width: 600px)" srcset="/assets/images/cabinets-4cdfe3c9.webp" type="image/webp">
+            <source media="(max-width: 600px)" srcset="/assets/images/cabinets-662566ba.jpeg" type="image/jpeg">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="/assets/images/cabinets-940128cd.avif" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="/assets/images/cabinets-f7ae1c72.webp" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="/assets/images/cabinets-f351c5b2.jpeg" type="image/jpeg">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="/assets/images/cabinets-08acf8e7.avif" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="/assets/images/cabinets-dc779299.webp" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="/assets/images/cabinets-0269448d.jpeg" type="image/jpeg">
+            <img src="/assets/images/cabinets-0269448d.jpeg" alt="library" width="1920" height="482" loading="eager" decoding="async">
+        </picture>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                 Blog Listings                -->
+    <!-- ============================================ -->
+
+    <div id="blog-listing">
+        <div class="cs-container">
+            
+                <h1 class="cs-title">No Recent Posts</h1>
+            
+        </div>
+
+        <!-- ============================================ -->
+<!--                Featured Posts                -->
+<!-- ============================================ -->
+
+<div id="blog-sidebar">
+    <!--Featured-->
+    <div class="cs-featured-group">
+        <span class="cs-sidebar-header">Featured Posts</span></div>
+</div>
+    </div>
+
+        </main>
+        <!-- ============================================ -->
+<!--                  Footer                      -->
+<!-- ============================================ -->
+
+<footer id="footer-1390">
+  <div class="cs-container">
+    <div class="cs-top">
+      <a aria-label="go back to home" class="logo" href="">
+        <img
+          src="../assets/images/cg-logo.jpg"
+          alt="logo"
+          width="210"
+          height="29"
+          aria-hidden="true"
+          decoding="async"
+        />
+        <h1 class="logo-text">Costin</h1>
+      </a>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <a href="" class="cs-link">Home</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">About</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Services</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Blog</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-bottom">
+      <!--Social-->
+      <ul class="cs-social">
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="facebook"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="twitter"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="instagram"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="twitter"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+      </ul>
+      <span class="cs-copyright">
+        © Copyright 2025 -
+        <a href="" class="cs-copyright-link">Costin Georgescu</a>
+      </span>
+      <div class="cs-flex">
+        <a href="" class="cs-copyright-link">Privacy Policy</a>
+        <span class="cs-separater">|</span>
+        <a href="" class="cs-copyright-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </body>
+</html>

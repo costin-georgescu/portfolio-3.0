@@ -1,0 +1,388 @@
+<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Standard meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Meta description for the page">
+        <link rel="canonical" href="https://www.example.com/project-two/">
+        <meta name="generator" content="Eleventy v3.1.1">
+
+        <!--Social Media Display-->
+        <meta property="og:title" content="Project Two | Code Stitch Web Designs"/>
+        <meta property="og:description" content="Meta description for the page"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.example.com/project-two/"/>
+        <meta property="og:image" content="/assets/images/logo-small.png"/>
+        <meta property="og:image:secure_url" content="/assets/images/logo-small.png"/>
+
+        <!--Favicons-->
+        <!-- https://realfavicongenerator.net/ -->
+        <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96"/>
+        <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg"/>
+        <link rel="shortcut icon" href="/assets/favicons/favicon.ico"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"/>
+        <meta name="apple-mobile-web-app-title" content="Starter Kit"/>
+        <link rel="manifest" href="/assets/favicons/site.webmanifest"/>
+
+        <!-- Preloads -->
+        <link rel="preload" as="image" href="/assets/svgs/logo-black.svg">
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+
+        <!-- Sitewide Stylesheets and Scripts -->
+        <link rel="stylesheet" href="/assets/css/root.css">
+        <script defer src="/assets/js/dark.js"></script>
+        <script defer src="/assets/js/nav.js"></script>
+
+        
+    <link rel="stylesheet" href="/assets/css/projects.css">
+
+
+        <title>Project Two | Code Stitch Web Designs</title>
+    </head>
+    <body>
+        <!--Screen reader skip main nav-->
+        <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+        <!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+  <div class="cs-container">
+    <!--Nav Logo-->
+    <!--Logo is turned white in the css with a filter on dark mode-->
+    <div class="logo-container">
+      <a href="/" class="logo" aria-label="back to home">
+        <img
+          src="/assets/images/cg-logo.jpg"
+          alt="logo"
+          width="210"
+          height="29"
+          aria-hidden="true"
+          decoding="async"
+        />
+        <h1 class="logo-text">Costin</h1>
+      </a>
+    </div>
+    <!--Navigation List-->
+    <nav class="cs-nav" role="navigation">
+      <!--Mobile Nav Toggle-->
+      <button class="cs-toggle" aria-label="mobile menu toggle">
+        <div class="cs-box" aria-hidden="true">
+          <span class="cs-line cs-line1" aria-hidden="true"></span>
+          <span class="cs-line cs-line2" aria-hidden="true"></span>
+          <span class="cs-line cs-line3" aria-hidden="true"></span>
+        </div>
+      </button>
+      <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+      <div class="cs-ul-wrapper">
+        <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+          <li class="cs-li">
+            <a href="" class="cs-li-link cs-active"> Home </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> About </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link">Services </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> Blog </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> Contact </a>
+          </li>
+          <li class="cs-li cs-cta">
+            <a href="" class="cs-button-6" aria-label="read more about us">
+              Book a quick call
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+        <main id="main">
+            
+
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <span class="cs-int-title">Project Two Gallery</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/project-two/" class="cs-link cs-active">Project Two Gallery</a>
+            </div>
+        </div>
+        <!--Background Image-->
+
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/cabinets-8aadd008.avif" type="image/avif">
+            <source media="(max-width: 600px)" srcset="/assets/images/cabinets-4cdfe3c9.webp" type="image/webp">
+            <source media="(max-width: 600px)" srcset="/assets/images/cabinets-662566ba.jpeg" type="image/jpeg">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="/assets/images/cabinets-940128cd.avif" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="/assets/images/cabinets-f7ae1c72.webp" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="/assets/images/cabinets-f351c5b2.jpeg" type="image/jpeg">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="/assets/images/cabinets-08acf8e7.avif" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="/assets/images/cabinets-dc779299.webp" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="/assets/images/cabinets-0269448d.jpeg" type="image/jpeg">
+            <img src="/assets/images/cabinets-0269448d.jpeg" alt="library" width="1920" height="482" loading="eager" decoding="async">
+        </picture>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                   Gallery                    -->
+    <!-- ============================================ -->
+
+    <section id="gallery-48">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Our Portfolio</span>
+                <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
+            </div>
+            <div class="cs-image-group">
+                <div class="cs-row cs-row-1">
+                    <!-- Row 1-->
+                    <picture class="cs-picture cs-picture-1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" width="420" height="567">
+                    </picture>
+                    <picture class="cs-picture cs-picture-2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" width="420" height="630">
+                    </picture>
+                    <picture class="cs-picture cs-picture-3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" width="420" height="512">
+                    </picture>
+                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+                </div>
+                <!-- Row 2 -->
+                <div class="cs-row cs-row-2">
+                    <picture class="cs-picture cs-picture-1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" width="420" height="492">
+                    </picture>
+                    <picture class="cs-picture cs-picture-2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" width="420" height="517">
+                    </picture>
+                    <picture class="cs-picture cs-picture-3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" width="420" height="629">
+                    </picture>
+                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+                </div>
+                <!-- Row 3 -->
+                <div class="cs-row cs-row-3">
+                    <picture class="cs-picture cs-picture-1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new black window structure" width="420" height="625">
+                    </picture>
+                    <picture class="cs-picture cs-picture-2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="kitchen rebovation" width="420" height="452">
+                    </picture>
+                    <picture class="cs-picture cs-picture-3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="bathroom renovation" width="420" height="629">
+                    </picture>
+                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+                </div>
+            </div>
+            <a href="/contact/" class="cs-button-solid">Get Started</a>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-51">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">Get It Done With Us Today</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis at sit pellentesque molestie.  Diam, adipiscing ultrices eu turpis gravida.
+            </p>
+            <a href="/contact/" class="cs-button-solid">Get A Free Quote</a>
+        </div>
+    </div>
+    <!-- Background Image-->
+    <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/cabinets-67c6eebc.avif" type="image/avif">
+        <source media="(max-width: 600px)" srcset="/assets/images/cabinets-f9de3b27.webp" type="image/webp">
+        <source media="(max-width: 600px)" srcset="/assets/images/cabinets-370d592f.jpeg" type="image/jpeg">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="/assets/images/cabinets-b5a05ccf.avif" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="/assets/images/cabinets-c99d84b3.webp" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="/assets/images/cabinets-a6c5fe68.jpeg" type="image/jpeg">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="/assets/images/cabinets-15a9f3cb.avif" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="/assets/images/cabinets-ee24ff35.webp" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="/assets/images/cabinets-bab9f08d.jpeg" type="image/jpeg">
+        <img src="/assets/images/cabinets-bab9f08d.jpeg" alt="cabinets" width="1920" height="426" loading="lazy" decoding="async">
+    </picture>
+</section>
+
+
+        </main>
+        <!-- ============================================ -->
+<!--                  Footer                      -->
+<!-- ============================================ -->
+
+<footer id="footer-1390">
+  <div class="cs-container">
+    <div class="cs-top">
+      <a aria-label="go back to home" class="logo" href="">
+        <img
+          src="../assets/images/cg-logo.jpg"
+          alt="logo"
+          width="210"
+          height="29"
+          aria-hidden="true"
+          decoding="async"
+        />
+        <h1 class="logo-text">Costin</h1>
+      </a>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <a href="" class="cs-link">Home</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">About</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Services</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Blog</a>
+        </li>
+        <li class="cs-li">
+          <a href="" class="cs-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-bottom">
+      <!--Social-->
+      <ul class="cs-social">
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="facebook"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="twitter"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="instagram"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+        <li class="cs-social-li">
+          <a
+            href=""
+            class="cs-social-link"
+            aria-label="twitter"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="cs-social-icon cs-default"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-ba.svg"
+              alt="icon"
+              loading="lazy"
+              decoding="async"
+              width="12"
+              height="12"
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+      </ul>
+      <span class="cs-copyright">
+        © Copyright 2025 -
+        <a href="" class="cs-copyright-link">Costin Georgescu</a>
+      </span>
+      <div class="cs-flex">
+        <a href="" class="cs-copyright-link">Privacy Policy</a>
+        <span class="cs-separater">|</span>
+        <a href="" class="cs-copyright-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </body>
+</html>
