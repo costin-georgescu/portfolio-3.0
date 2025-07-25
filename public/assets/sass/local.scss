@@ -353,7 +353,7 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #services-1329 {
+  #projects-964 {
     padding: var(--sectionPadding);
     position: relative;
     background-color: var(--backgroundColor);
@@ -560,7 +560,7 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #services-1329 {
+  #projects-964 {
     .cs-content {
       text-align: left;
       flex-direction: row;
@@ -580,7 +580,7 @@
 
 /* Desktop - 900px */
 @media only screen and (min-width: 56.25rem) {
-  #services-1329 {
+  #projects-964 {
     .cs-container {
       max-width: calc(1280 / 16 * 1rem);
     }
@@ -598,7 +598,7 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #reviews-497 {
+  #about-964 {
     padding: var(--sectionPadding);
     background-color: var(--backgroundColor);
     position: relative;
@@ -676,13 +676,13 @@
       z-index: 1;
       box-sizing: border-box;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      
+
       // Glass-morphism effect
       background: rgba(50, 69, 71, 0.9);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(50, 69, 71, 0.25);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      
+
       // Add subtle inner shadow for depth
       &:before {
         content: '';
@@ -720,7 +720,7 @@
       &:hover {
         transform: translateY(-4px);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-        
+
         &:after {
           opacity: 0.95;
         }
@@ -827,7 +827,7 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #reviews-497 {
+  #about-964 {
     .cs-container {
       max-width: calc(1280 / 16 * 1rem);
       flex-direction: column;
@@ -850,7 +850,7 @@
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #reviews-497 {
+  #about-964 {
     .cs-container {
       flex-direction: row;
       align-items: flex-start;

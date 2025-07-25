@@ -309,12 +309,12 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #services-1329 {
+  #projects-964 {
     padding: var(--sectionPadding);
     position: relative;
     background-color: var(--backgroundColor);
   }
-  #services-1329 .cs-container {
+  #projects-964 .cs-container {
     width: 100%;
     max-width: 36.5rem;
     margin: auto;
@@ -324,7 +324,7 @@
     align-items: center;
     gap: clamp(3rem, 6vw, 4rem);
   }
-  #services-1329 .cs-content {
+  #projects-964 .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: center;
     width: 100%;
@@ -334,14 +334,14 @@
     align-items: center;
     gap: 1rem;
   }
-  #services-1329 .cs-title {
+  #projects-964 .cs-title {
     max-width: 20ch;
     color: var(--bodyTextColorWhite);
   }
-  #services-1329 .cs-text {
+  #projects-964 .cs-text {
     color: var(--bodyTextColorWhite);
   }
-  #services-1329 .cs-card-group {
+  #projects-964 .cs-card-group {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -350,7 +350,7 @@
     /* 16px - 20px */
     gap: clamp(1rem, 2.5vw, 1.25rem);
   }
-  #services-1329 .cs-item {
+  #projects-964 .cs-item {
     text-align: center;
     list-style: none;
     width: 100%;
@@ -372,16 +372,16 @@
     border-radius: 16px;
     overflow: hidden;
   }
-  #services-1329 .cs-item:hover .cs-picture::after {
+  #projects-964 .cs-item:hover .cs-picture::after {
     opacity: 1;
   }
-  #services-1329 .cs-item:hover .cs-picture img {
+  #projects-964 .cs-item:hover .cs-picture img {
     transform: scale(1.2);
   }
-  #services-1329 .cs-item:hover .cs-h3 {
+  #projects-964 .cs-item:hover .cs-h3 {
     color: var(--primary);
   }
-  #services-1329 .cs-link {
+  #projects-964 .cs-link {
     text-decoration: none;
     width: 100%;
     height: 100%;
@@ -395,7 +395,7 @@
     position: relative;
     z-index: 1;
   }
-  #services-1329 .cs-link::after {
+  #projects-964 .cs-link::after {
     /* hover overlay */
     content: "";
     width: 100%;
@@ -408,7 +408,7 @@
     /* as we can't animate background gradients, we animate the change of opacity from 0 to 1 */
     transition: opacity 0.3s;
   }
-  #services-1329 .cs-picture {
+  #projects-964 .cs-picture {
     width: 100%;
     height: 100%;
     display: block;
@@ -419,7 +419,7 @@
     border-radius: 16px;
     overflow: hidden;
   }
-  #services-1329 .cs-picture:before {
+  #projects-964 .cs-picture:before {
     /* background color overlay */
     content: "";
     width: 100%;
@@ -433,7 +433,7 @@
     top: 0;
     left: 0;
   }
-  #services-1329 .cs-picture:after {
+  #projects-964 .cs-picture:after {
     /* background color overlay on hover */
     content: "";
     width: 100%;
@@ -448,7 +448,7 @@
     left: 0;
     transition: opacity 0.3s;
   }
-  #services-1329 .cs-picture img {
+  #projects-964 .cs-picture img {
     width: 100%;
     height: 100%;
     /* Makes img tag act as a background image */
@@ -459,7 +459,7 @@
     z-index: -1;
     transition: transform 0.7s;
   }
-  #services-1329 .cs-arrow {
+  #projects-964 .cs-arrow {
     width: 100%;
     height: auto;
     opacity: 0;
@@ -471,25 +471,25 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #services-1329 .cs-content {
+  #projects-964 .cs-content {
     text-align: left;
     flex-direction: row;
     justify-content: space-between;
     gap: 2.5rem;
   }
-  #services-1329 .cs-text {
+  #projects-964 .cs-text {
     width: 50%;
   }
-  #services-1329 .cs-title {
+  #projects-964 .cs-title {
     margin: 0;
   }
 }
 /* Desktop - 900px */
 @media only screen and (min-width: 56.25rem) {
-  #services-1329 .cs-container {
+  #projects-964 .cs-container {
     max-width: 80rem;
   }
-  #services-1329 .cs-item {
+  #projects-964 .cs-item {
     height: 30rem;
     grid-column: span 4;
   }
@@ -499,13 +499,13 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #reviews-497 {
+  #about-964 {
     padding: var(--sectionPadding);
     background-color: var(--backgroundColor);
     position: relative;
     z-index: 1;
   }
-  #reviews-497 .cs-container {
+  #about-964 .cs-container {
     width: 100%;
     /* changes to 1280px at tablet */
     max-width: 34.375rem;
@@ -515,7 +515,7 @@
     align-items: center;
     gap: clamp(3rem, 6vw, 4rem);
   }
-  #reviews-497 .cs-content {
+  #about-964 .cs-content {
     text-align: center;
     width: 100%;
     max-width: 50rem;
@@ -523,7 +523,7 @@
     flex-direction: column;
     align-items: center;
   }
-  #reviews-497 .cs-topper {
+  #about-964 .cs-topper {
     color: var(--primary);
     font-size: var(--topperFontSize);
     line-height: 1.2em;
@@ -534,7 +534,7 @@
     margin-bottom: 0.25rem;
     display: block;
   }
-  #reviews-497 .cs-title {
+  #about-964 .cs-title {
     font-size: var(--headerFontSize);
     font-weight: 900;
     line-height: 1.2em;
@@ -544,7 +544,7 @@
     color: var(--bodyTextColorWhite);
     position: relative;
   }
-  #reviews-497 .cs-text {
+  #about-964 .cs-text {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
     text-align: center;
@@ -554,7 +554,7 @@
     color: var(--bodyTextColorWhite);
     opacity: 0.9;
   }
-  #reviews-497 .cs-button-solid {
+  #about-964 .cs-button-solid {
     font-size: 1rem;
     line-height: 1.2em;
     text-decoration: none;
@@ -577,7 +577,7 @@
     border: 1px solid rgba(50, 69, 71, 0.25);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
-  #reviews-497 .cs-button-solid:before {
+  #about-964 .cs-button-solid:before {
     content: "";
     position: absolute;
     top: 0;
@@ -587,7 +587,7 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 0%, transparent 100%);
     z-index: -1;
   }
-  #reviews-497 .cs-button-solid:after {
+  #about-964 .cs-button-solid:after {
     content: "";
     position: absolute;
     top: 0;
@@ -599,18 +599,18 @@
     z-index: -1;
     transition: opacity 0.3s ease;
   }
-  #reviews-497 .cs-button-solid:hover {
+  #about-964 .cs-button-solid:hover {
     transform: translateY(-4px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
   }
-  #reviews-497 .cs-button-solid:hover:after {
+  #about-964 .cs-button-solid:hover:after {
     opacity: 0.95;
   }
-  #reviews-497 .cs-button-solid:active {
+  #about-964 .cs-button-solid:active {
     transform: translateY(0);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
-  #reviews-497 .cs-review {
+  #about-964 .cs-review {
     width: 100%;
     max-width: 50rem;
     padding: clamp(2rem, 4vw, 3rem);
@@ -627,11 +627,11 @@
     z-index: 1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  #reviews-497 .cs-review:hover {
+  #about-964 .cs-review:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   }
-  #reviews-497 .cs-review-text {
+  #about-964 .cs-review-text {
     font-size: clamp(1rem, 1.5vw, 1.25rem);
     line-height: 1.8em;
     width: 100%;
@@ -642,7 +642,7 @@
     position: relative;
     padding: 0 1rem;
   }
-  #reviews-497 .cs-review-text::before, #reviews-497 .cs-review-text::after {
+  #about-964 .cs-review-text::before, #about-964 .cs-review-text::after {
     content: '"';
     font-size: 2em;
     line-height: 1;
@@ -650,21 +650,21 @@
     opacity: 0.7;
     position: absolute;
   }
-  #reviews-497 .cs-review-text::before {
+  #about-964 .cs-review-text::before {
     top: -0.5rem;
     left: 0;
   }
-  #reviews-497 .cs-review-text::after {
+  #about-964 .cs-review-text::after {
     bottom: -1.5rem;
     right: 0;
   }
-  #reviews-497 .cs-info {
+  #about-964 .cs-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
   }
-  #reviews-497 .cs-profile {
+  #about-964 .cs-profile {
     width: 4.375rem;
     height: 4.375rem;
     border-radius: 50%;
@@ -673,7 +673,7 @@
     border: 3px solid rgba(255, 255, 255, 0.1);
     object-fit: cover;
   }
-  #reviews-497 .cs-name {
+  #about-964 .cs-name {
     font-size: clamp(1rem, 1.5vw, 1.25rem);
     line-height: 1.5em;
     font-weight: 700;
@@ -681,7 +681,7 @@
     color: var(--bodyTextColorWhite);
     display: block;
   }
-  #reviews-497 .cs-location {
+  #about-964 .cs-location {
     font-size: clamp(0.8125rem, 1.5vw, 0.9375rem);
     line-height: 1.2em;
     text-transform: uppercase;
@@ -693,17 +693,17 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #reviews-497 .cs-container {
+  #about-964 .cs-container {
     max-width: 80rem;
     flex-direction: column;
     align-items: center;
     gap: clamp(3rem, 6vw, 5rem);
   }
-  #reviews-497 .cs-content {
+  #about-964 .cs-content {
     text-align: center;
     align-items: center;
   }
-  #reviews-497 .cs-review {
+  #about-964 .cs-review {
     max-width: 50rem;
     padding: clamp(2.5rem, 5vw, 4rem);
     margin: 0 auto;
@@ -711,13 +711,13 @@
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #reviews-497 .cs-container {
+  #about-964 .cs-container {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     gap: 0;
   }
-  #reviews-497 .cs-content {
+  #about-964 .cs-content {
     width: 40%;
     max-width: 31.25rem;
     text-align: left;
@@ -725,7 +725,7 @@
     margin-left: 2rem;
     order: 1;
   }
-  #reviews-497 .cs-review {
+  #about-964 .cs-review {
     width: 55%;
     max-width: 43.75rem;
     margin: 0;
