@@ -8,8 +8,6 @@
     background-color: var(--backgroundColorDark);
     position: relative;
     z-index: 1;
-    /* Single consistent background color for all service cards */
-    /* Removed background images for a simpler hover effect */
   }
   #services-964 .cs-container {
     width: 100%;
@@ -167,23 +165,6 @@
     position: absolute;
     display: block;
     bottom: 0rem;
-    left: 0;
-  }
-  #services-964 .cs-waves {
-    width: 100%;
-    height: 13.875rem;
-    background-color: var(--primary);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-  }
-  #services-964 .cs-waves img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
     left: 0;
   }
 }

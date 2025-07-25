@@ -776,13 +776,6 @@
       }
     }
 
-    .cs-contact-group {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: calc(24 / 16 * 1rem);
-    }
-
     .cs-social {
       height: calc(32 / 16 * 1rem);
       opacity: 1;
@@ -840,7 +833,7 @@
           font-weight: 700;
           min-width: calc(174 / 16 * 1rem);
           margin: 0; /* Changed from auto to 0 */
-          color: #1a1a1a;
+          color: #a13030;
           padding: 0.7rem calc(24 / 16 * 1rem); /* Added vertical padding */
           /* prevents padding and border from affecting height and width */
           box-sizing: border-box;
@@ -859,7 +852,7 @@
             content: '';
             width: calc(6 / 16 * 1rem);
             height: 100%;
-            background: #1a1a1a;
+            background: #e12a2a;
             opacity: 1;
             position: absolute;
             display: block;

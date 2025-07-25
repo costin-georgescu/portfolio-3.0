@@ -1,15 +1,16 @@
 {
-    "name": "Intermediate-Website-Kit-SASS",
+    "name": "intermediate-website-kit-sass",
     "version": "2.0.0",
     "description": "The official CodeStitch Intermediate kit, featuring 11ty, Decap CMS and SASS - all set up for you! Perfect for websites of all sizes.",
     "main": "index.js",
     "scripts": {
-        "watch:cms": "npx decap-server",
+        "watch:cms": "npx decap-server --port 8082",
         "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
-        "watch:sass": "node build-css.js",
+        "watch:sass": "node build-css.js --watch",
         "build:sass": "node build-css.js",
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
-        "start": "npm run build:sass && run-p watch:*",
+        "start": "npm run build:sass && run-p watch:sass watch:eleventy",
+        "start:cms": "npm run build:sass && run-p watch:*",
         "build": "run-s build:*",
         "build:prod": "rm -rf public && mkdir -p public && npm run build:sass && npm run build:eleventy && cp -r src/assets public/ && touch public/.nojekyll"
     },
@@ -31,6 +32,7 @@
         "@codestitchofficial/eleventy-plugin-sharp-images": "^2.1.1",
         "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
         "autoprefixer": "^10.4.21",
+        "chokidar": "^4.0.3",
         "codestitch-sharp-image-automation": "^0.3.0",
         "cross-env": "^7.0.3",
         "cssnano": "^7.0.7",
