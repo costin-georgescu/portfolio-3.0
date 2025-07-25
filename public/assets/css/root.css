@@ -324,6 +324,48 @@
     overflow: visible;
     transform: translateX(0);
   }
+  #cs-navigation.cs-active .cs-li.cs-cta {
+    margin: 0;
+  }
+  #cs-navigation.cs-active .cs-li.cs-cta .cs-button-6 {
+    /* Base button styles */
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: left;
+    margin: 0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    transition: color 0.3s, background 0.3s, border 0.3s, transform 0.3s, box-shadow 0.3s;
+    /* Default state - glass-morphism effect */
+    background-color: rgba(50, 69, 71, 0.4);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(50, 69, 71, 0.3);
+    backdrop-filter: blur(5px);
+    letter-spacing: 0.03em;
+    /* Icon styling */
+  }
+  #cs-navigation.cs-active .cs-li.cs-cta .cs-button-6 .cs-button-icon {
+    transition: transform 0.3s ease;
+  }
+  #cs-navigation.cs-active .cs-li.cs-cta .cs-button-6:hover {
+    background-color: rgba(50, 69, 71, 0.6);
+    transform: translateX(-2px);
+    box-shadow: 0 10px 25px rgba(50, 69, 71, 0.5);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  #cs-navigation.cs-active .cs-li.cs-cta .cs-button-6:hover .cs-button-icon {
+    transform: scale(1.1);
+  }
   #cs-navigation .cs-container {
     width: 100%;
     display: flex;
