@@ -13,6 +13,7 @@ module.exports = function(eleventyConfig) {
   });
 
   // Watch for changes in these directories
+  eleventyConfig.addWatchTarget('./src/assets/sass/');
   eleventyConfig.addWatchTarget('./src/assets/');
   
   // Add Sharp Images plugin

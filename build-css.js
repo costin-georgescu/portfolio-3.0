@@ -1,7 +1,6 @@
 const sass = require('sass');
 const fs = require('fs');
 const path = require('path');
-const chokidar = require('chokidar');
 
 // Ensure the CSS output directory exists
 const cssDir = path.join(__dirname, 'src/assets/css');
@@ -11,14 +10,14 @@ if (!fs.existsSync(cssDir)) {
 
 // SASS files to compile
 const sassFiles = [
-  { input: 'src/assets/sass/critical.scss', output: 'src/assets/css/critical.css' },
-  { input: 'src/assets/sass/local.scss', output: 'src/assets/css/local.css' },
-  { input: 'src/assets/sass/root.scss', output: 'src/assets/css/root.css' },
-  { input: 'src/assets/sass/about.scss', output: 'src/assets/css/about.css' },
-  { input: 'src/assets/sass/blog.scss', output: 'src/assets/css/blog.css' },
-  { input: 'src/assets/sass/contact.scss', output: 'src/assets/css/contact.css' },
-  { input: 'src/assets/sass/projects.scss', output: 'src/assets/css/projects.css' },
-  { input: 'src/assets/sass/reviews.scss', output: 'src/assets/css/reviews.css' }
+  { input: path.join(__dirname, 'src/assets/sass/critical.scss'), output: path.join(__dirname, 'src/assets/css/critical.css') },
+  { input: path.join(__dirname, 'src/assets/sass/local.scss'), output: path.join(__dirname, 'src/assets/css/local.css') },
+  { input: path.join(__dirname, 'src/assets/sass/root.scss'), output: path.join(__dirname, 'src/assets/css/root.css') },
+  { input: path.join(__dirname, 'src/assets/sass/about.scss'), output: path.join(__dirname, 'src/assets/css/about.css') },
+  { input: path.join(__dirname, 'src/assets/sass/blog.scss'), output: path.join(__dirname, 'src/assets/css/blog.css') },
+  { input: path.join(__dirname, 'src/assets/sass/contact.scss'), output: path.join(__dirname, 'src/assets/css/contact.css') },
+  { input: path.join(__dirname, 'src/assets/sass/projects.scss'), output: path.join(__dirname, 'src/assets/css/projects.css') },
+  { input: path.join(__dirname, 'src/assets/sass/reviews.scss'), output: path.join(__dirname, 'src/assets/css/reviews.css') }
 ];
 
 // Function to compile a single SASS file
@@ -41,6 +40,13 @@ function compileSassFile(file) {
       sourceMap: process.env.NODE_ENV !== 'production'
     });
     
+    // Ensure output directory exists
+    const outputDir = path.dirname(sassFile.output);
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+    
+    // Write the compiled CSS
     fs.writeFileSync(sassFile.output, result.css);
     console.log(`✅ Compiled ${sassFile.input} → ${sassFile.output}`);
   } catch (error) {
@@ -74,18 +80,16 @@ compileAllSassFiles();
 if (process.argv.includes('--watch')) {
   console.log('👀 Watching for SASS changes...');
   
-  const watcher = chokidar.watch('src/assets/sass/**/*.scss', {
-    persistent: true,
-    ignoreInitial: true
+  // Watch the SASS directory for changes
+  const watcher = watch('src/assets/sass', { recursive: true }, (eventType, filename) => {
+    if (filename && filename.endsWith('.scss')) {
+      console.log(`File ${filename} has been changed`);
+      compileSassFile(path.join(__dirname, 'src/assets/sass', filename));
+    }
   });
 
-  watcher
-    .on('change', path => {
-      console.log(`File ${path} has been changed`);
-      compileSassFile(path);
-    })
-    .on('add', path => {
-      console.log(`File ${path} has been added`);
-      compileSassFile(path);
-    });
+  // Handle errors
+  watcher.on('error', error => {
+    console.error('Watcher error:', error);
+  });
 }
