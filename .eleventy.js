@@ -55,6 +55,6 @@ module.exports = function(eleventyConfig) {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
     passthroughFileCopy: true,
-    pathPrefix: process.env.ELEVENTY_ENV === 'PROD' ? '/portfolio-3.0/' : '/'
+    pathPrefix: '/' // Remove the portfolio-3.0 prefix to fix 404 errors
   };
 };
