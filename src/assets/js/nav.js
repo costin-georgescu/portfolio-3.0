@@ -1,7 +1,15 @@
 // add classes for mobile navigation toggling
-var CSbody = document.querySelector('body');
+const CSbody = document.querySelector('body');
 const CSnavbarMenu = document.querySelector('#cs-navigation');
 const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
+
+// Make the closeMobileMenu function available globally
+window.closeMobileMenu = function() {
+  CShamburgerMenu.classList.remove('cs-active');
+  CSnavbarMenu.classList.remove('cs-active');
+  CSbody.classList.remove('cs-open');
+  document.getElementById('cs-expanded').setAttribute('aria-expanded', 'false');
+};
 
 CShamburgerMenu.addEventListener('click', function () {
   CShamburgerMenu.classList.toggle('cs-active');
