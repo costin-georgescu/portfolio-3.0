@@ -826,67 +826,60 @@
         align-items: center;
 
         .cs-button-6 {
-          text-align: center;
+          /* Base button styles */
           font-size: calc(16 / 16 * 1rem);
-          line-height: 1.2; /* Changed from fixed height to relative */
+          line-height: 1.2em;
           text-decoration: none;
           font-weight: 700;
-          min-width: calc(174 / 16 * 1rem);
-          margin: 0; /* Changed from auto to 0 */
-          color: #a13030;
-          padding: 0.7rem calc(24 / 16 * 1rem); /* Added vertical padding */
-          /* prevents padding and border from affecting height and width */
-          box-sizing: border-box;
-          background-color: #fff;
-          border: 2px solid #1a1a1a;
-          border-radius: 10px;
-          display: inline-flex;
+          text-align: center;
+          margin: 0;
+          min-width: calc(150 / 16 * 1rem);
+          padding: calc(12 / 16 * 1rem) calc(24 / 16 * 1rem);
+          border-radius: calc(8 / 16 * 1rem);
+          display: flex;
           align-items: center;
           justify-content: center;
-          gap: calc(24 / 16 * 1rem);
+          gap: calc(8 / 16 * 1rem);
           position: relative;
           z-index: 1;
-          transition: color 0.3s;
+          box-sizing: border-box;
+          transition: color 0.3s, background 0.3s, border 0.3s, transform 0.3s,
+            box-shadow 0.3s, backdrop-filter 0.3s;
 
-          &:before {
-            content: '';
-            width: calc(6 / 16 * 1rem);
-            height: 100%;
-            background: #e12a2a;
-            opacity: 1;
-            position: absolute;
-            display: block;
-            top: 0;
-            left: 0;
-            transition: width 0.3s, border-radius 0.3s;
-            z-index: -1;
-            border-radius: 8px 0 0 8px;
-          }
+          /* Default state (above fold) - glass-morphism effect */
+          background-color: rgba(50, 69, 71, 0.4);
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          box-shadow: 0 8px 20px rgba(50, 69, 71, 0.3);
+          backdrop-filter: blur(5px);
+          letter-spacing: 0.03em;
 
-          &:hover:before {
-            width: 100%;
-            border-radius: 8px;
-          }
-
-          .cs-icon {
-            width: calc(24 / 16 * 1rem);
-            height: auto;
-
-            path {
-              transition: fill 0.3s;
-            }
+          /* Icon styling */
+          .cs-button-icon {
+            transition: transform 0.3s ease;
           }
 
           &:hover {
-            color: #fff;
-            &:before {
-              width: 100%;
+            background-color: rgba(50, 69, 71, 0.6);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(50, 69, 71, 0.5);
+            border-color: rgba(255, 255, 255, 0.3);
+            
+            .cs-button-icon {
+              transform: scale(1.1);
             }
+          }
 
-            .cs-icon {
-              path {
-                fill: #fff;
-              }
+          /* Scrolled state - gradient style */
+          &.scrolled {
+            color: #fff;
+            background: linear-gradient(135deg, #324547 0%, #4a686b 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: none;
+
+            &:hover {
+              transform: translateY(-3px);
+              box-shadow: 0 10px 25px rgba(50, 69, 71, 0.6);
             }
           }
         }
