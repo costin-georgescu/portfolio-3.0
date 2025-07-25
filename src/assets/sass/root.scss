@@ -97,46 +97,104 @@
   .cs-button-solid {
     z-index: 1;
     position: relative;
-    display: inline-block;
-    background-color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: auto;
-    padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+    padding: calc(18 / 16 * 1rem) calc(36 / 16 * 1rem);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: calc(16 / 16 * 1rem);
-    line-height: calc(16 / 16 * 1em);
-    font-weight: bold;
-    border-radius: calc(4 / 16 * 1rem);
+    font-size: calc(17 / 16 * 1rem);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
     overflow: hidden;
-
-    // Transition Properties
-    color: var(--bodyTextColorWhite);
-    transition: color 0.3s;
-    transition-delay: 0.1s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
-
-    &:hover {
-      color: #fff;
-
-      &:before {
-        width: 100%;
-      }
-    }
-
+    cursor: pointer;
+    
+    // Glass-morphism effect
+    background: rgba(50, 69, 71, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(50, 69, 71, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    // Add subtle inner shadow for depth
     &:before {
-      z-index: -1;
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
-      content: '';
-      opacity: 1;
-      display: block;
-      background-color: #000;
+      width: 100%;
       height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        transparent 100%
+      );
+      z-index: -1;
+    }
+  
+    // Accent gradient overlay
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        rgba(226, 88, 34, 0.8) 0%,
+        rgba(255, 186, 67, 0.8) 100%
+      );
+      opacity: 0.9;
+      z-index: -1;
+      transition: opacity 0.3s ease;
+    }
 
-      //Transition properties
-      width: 0;
-      transition: width 0.3s;
+    // Text color
+    color: var(--bodyTextColorWhite);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+    // Hover effects
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    // Active state
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    
+      &:after {
+        opacity: 0.8;
+      }
+    }
+
+    // Focus state
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(226, 88, 34, 0.2);
+    }
+
+    // Disabled state
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
     }
   }
 

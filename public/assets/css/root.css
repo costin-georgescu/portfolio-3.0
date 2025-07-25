@@ -80,40 +80,78 @@
   .cs-button-solid {
     z-index: 1;
     position: relative;
-    display: inline-block;
-    background-color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: auto;
-    padding: 1rem 2rem;
+    padding: 1.125rem 2.25rem;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1rem;
-    line-height: 1em;
-    font-weight: bold;
-    border-radius: 0.25rem;
+    font-size: 1.0625rem;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
     overflow: hidden;
-    color: var(--bodyTextColorWhite);
-    transition: color 0.3s;
-    transition-delay: 0.1s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
-  }
-  .cs-button-solid:hover {
-    color: #fff;
-  }
-  .cs-button-solid:hover:before {
-    width: 100%;
+    cursor: pointer;
+    background: rgba(50, 69, 71, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(50, 69, 71, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: var(--bodyTextColorWhite);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   }
   .cs-button-solid:before {
-    z-index: -1;
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    content: "";
-    opacity: 1;
-    display: block;
-    background-color: #000;
+    width: 100%;
     height: 100%;
-    width: 0;
-    transition: width 0.3s;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+    z-index: -1;
+  }
+  .cs-button-solid:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(226, 88, 34, 0.8) 0%, rgba(255, 186, 67, 0.8) 100%);
+    opacity: 0.9;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+  }
+  .cs-button-solid:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  .cs-button-solid:hover:after {
+    opacity: 1;
+  }
+  .cs-button-solid:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  .cs-button-solid:active:after {
+    opacity: 0.8;
+  }
+  .cs-button-solid:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(226, 88, 34, 0.2);
+  }
+  .cs-button-solid:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  .cs-button-solid:disabled:hover {
+    transform: none;
+    box-shadow: none;
   }
   .cs-button-outline {
     z-index: 1;
