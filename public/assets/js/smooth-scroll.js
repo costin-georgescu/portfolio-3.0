@@ -1,10 +1,26 @@
+// Get mobile menu elements
+const menuToggle = document.querySelector('.cs-toggle');
+const navList = document.getElementById('cs-expanded');
+
 // Smooth scrolling for navigation links
 const navLinks = document.querySelectorAll('.cs-li-link');
+
+// Function to close mobile menu
+function closeMobileMenu() {
+  if (menuToggle && navList) {
+    menuToggle.classList.remove('cs-active');
+    navList.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('cs-open');
+  }
+}
 
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
     // Prevent default link behavior
     e.preventDefault();
+    
+    // Close mobile menu if open
+    closeMobileMenu();
     
     // Get the target section ID from the href
     const targetId = this.getAttribute('href');
