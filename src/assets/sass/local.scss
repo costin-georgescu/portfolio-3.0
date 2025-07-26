@@ -43,10 +43,13 @@
       color: var(--bodyTextColorWhite);
     }
 
-    .cs-title,
+    .cs-title {
+      color: var(--bodyTextColorWhite);
+    }
+
     .cs-text {
       max-width: 100%;
-      color: var(--bodyTextColorWhite);
+      color: var(--bodyTextColorGray);
     }
 
     .cs-card-group {
@@ -100,7 +103,7 @@
           color: var(--bodyTextColorWhite);
         }
         .cs-item-text {
-          color: var(--bodyTextColorWhite);
+          color: var(--bodyTextColorGray);
           opacity: 1;
         }
         .cs-icon-wrapper {
@@ -332,7 +335,7 @@
       font-size: calc(16 / 16 * 1rem);
       line-height: 1.5em;
       margin: 0;
-      color: var(--bodyTextColorWhite);
+      color: var(--bodyTextColorGray);
     }
   }
 }
@@ -386,7 +389,7 @@
     }
 
     .cs-text {
-      color: var(--bodyTextColorWhite);
+      color: var(--bodyTextColorGray);
     }
 
     .cs-card-group {

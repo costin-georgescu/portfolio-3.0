@@ -39,10 +39,12 @@
     margin: 0;
     color: var(--bodyTextColorWhite);
   }
-  #services-964 .cs-title,
+  #services-964 .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
   #services-964 .cs-text {
     max-width: 100%;
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColorGray);
   }
   #services-964 .cs-card-group {
     margin: 0;
@@ -93,7 +95,7 @@
     color: var(--bodyTextColorWhite);
   }
   #services-964 .cs-item:hover .cs-item-text {
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColorGray);
     opacity: 1;
   }
   #services-964 .cs-item:hover .cs-icon-wrapper {
@@ -294,7 +296,7 @@
     font-size: 1rem;
     line-height: 1.5em;
     margin: 0;
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColorGray);
   }
 }
 /* Tablet - 768px */
@@ -339,7 +341,7 @@
     color: var(--bodyTextColorWhite);
   }
   #projects-964 .cs-text {
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColorGray);
   }
   #projects-964 .cs-card-group {
     width: 100%;
