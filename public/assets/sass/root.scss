@@ -21,6 +21,7 @@
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
+    --bodyTextColorGray: #ebecf0;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -113,13 +114,13 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     cursor: pointer;
-    
+
     // Glass-morphism effect
     background: rgba(50, 69, 71, 0.85);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(50, 69, 71, 0.2);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    
+
     // Add subtle inner shadow for depth
     &:before {
       content: '';
@@ -135,7 +136,7 @@
       );
       z-index: -1;
     }
-  
+
     // Accent gradient overlay
     &:after {
       content: '';
@@ -162,7 +163,7 @@
     &:hover {
       transform: translateY(-3px);
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    
+
       &:after {
         opacity: 1;
       }
@@ -172,7 +173,7 @@
     &:active {
       transform: translateY(0);
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    
+
       &:after {
         opacity: 0.8;
       }
@@ -190,7 +191,7 @@
       cursor: not-allowed;
       transform: none;
       box-shadow: none;
-    
+
       &:hover {
         transform: none;
         box-shadow: none;

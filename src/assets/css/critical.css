@@ -96,7 +96,7 @@
     text-align: inherit;
     max-width: 51.8125rem;
     margin: 0 auto 1rem 0;
-    color: #fff;
+    color: var(--bodyTextColorWhite);
     position: relative;
   }
   #hero-1059 .cs-text {
@@ -108,7 +108,7 @@
     /* 464px - 622px */
     max-width: clamp(29rem, 60vw, 38.785rem);
     margin: 0 0 2.5rem 0;
-    color: #fff;
+    color: var(--bodyTextColorGray);
   }
   #hero-1059 .cs-button-solid {
     font-size: 1rem;
