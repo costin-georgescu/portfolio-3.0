@@ -30,6 +30,9 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
   }
+  #services-964 .cs-content .cs-topper {
+    margin-bottom: 0.75rem;
+  }
   #services-964 .cs-text {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
@@ -230,6 +233,9 @@
     flex-direction: column;
     align-items: center;
   }
+  #why-choose-1662 .cs-content .cs-topper {
+    margin-bottom: 0.75rem;
+  }
   #why-choose-1662 .cs-title {
     margin: 0;
     max-width: 23ch;
@@ -335,6 +341,9 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
     gap: 1rem;
+  }
+  #projects-964 .cs-content .cs-topper {
+    margin-bottom: 0.75rem;
   }
   #projects-964 .cs-title {
     max-width: 20ch;
@@ -533,7 +542,7 @@
     text-align: inherit;
     letter-spacing: 0.1em;
     font-weight: 700;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
     display: block;
   }
   #about-964 .cs-title {
