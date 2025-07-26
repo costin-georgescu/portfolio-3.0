@@ -468,28 +468,6 @@
     flex: none;
     margin-left: auto;
   }
-  #cs-navigation .cs-contact-group {
-    display: none;
-    position: relative;
-    z-index: 1;
-  }
-  #cs-navigation .cs-phone {
-    font-size: 1rem;
-    line-height: 1.5em;
-    text-decoration: none;
-    margin: 0;
-    color: var(--headerColor);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    transition: opacity 0.3s, color 0.3s;
-  }
-  #cs-navigation .cs-phone-icon {
-    width: 1.5rem;
-    height: auto;
-    display: block;
-  }
   #cs-navigation .cs-social {
     display: none;
   }
@@ -829,7 +807,7 @@
     box-shadow: 0 10px 25px rgba(50, 69, 71, 0.6);
   }
   #cs-navigation .cs-li-link {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;

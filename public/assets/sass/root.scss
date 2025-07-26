@@ -583,31 +583,6 @@
       margin-left: auto;
     }
 
-    .cs-contact-group {
-      display: none;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cs-phone {
-      font-size: calc(16 / 16 * 1rem);
-      line-height: 1.5em;
-      text-decoration: none;
-      margin: 0;
-      color: var(--headerColor);
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: calc(8 / 16 * 1rem);
-      transition: opacity 0.3s, color 0.3s;
-    }
-
-    .cs-phone-icon {
-      width: calc(24 / 16 * 1rem);
-      height: auto;
-      display: block;
-    }
-
     .cs-social {
       display: none;
     }
@@ -995,7 +970,7 @@
     }
 
     .cs-li-link {
-      font-size: calc(16 / 16 * 1rem);
+      font-size: 1.1rem;
       line-height: 1.5em;
       text-decoration: none;
       margin: 0;
