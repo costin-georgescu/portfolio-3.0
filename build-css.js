@@ -1,5 +1,6 @@
 const sass = require('sass');
 const fs = require('fs');
+const { watch } = require('fs/promises');
 const path = require('path');
 
 // Ensure the CSS output directory exists
@@ -81,15 +82,24 @@ if (process.argv.includes('--watch')) {
   console.log('👀 Watching for SASS changes...');
   
   // Watch the SASS directory for changes
-  const watcher = watch('src/assets/sass', { recursive: true }, (eventType, filename) => {
-    if (filename && filename.endsWith('.scss')) {
-      console.log(`File ${filename} has been changed`);
-      compileSassFile(path.join(__dirname, 'src/assets/sass', filename));
-    }
-  });
+  (async () => {
+    try {
+      const watcher = fs.watch('src/assets/sass', { recursive: true }, (eventType, filename) => {
+        if (filename && filename.endsWith('.scss')) {
+          console.log(`File ${filename} has been changed`);
+          compileSassFile(path.join(__dirname, 'src/assets/sass', filename));
+        }
+      });
 
-  // Handle errors
-  watcher.on('error', error => {
-    console.error('Watcher error:', error);
-  });
+      // Handle errors
+      watcher.on('error', error => {
+        console.error('Watcher error:', error);
+      });
+
+      // Keep the process running
+      await new Promise(() => {});
+    } catch (error) {
+      console.error('Error setting up watcher:', error);
+    }
+  })();
 }
